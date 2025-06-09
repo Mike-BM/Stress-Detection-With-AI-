@@ -1,4 +1,5 @@
-🎯 Detecting Stress for Healthier Lives: A Wearable-based AI Solution Supporting SDG 3
+🎯 Detecting Stress for Healthier Lives:
+A Wearable-based AI Solution Supporting SDG 3
 🧠 Objective
 This project applies machine learning to wearable biosensor data to detect stress levels, contributing to UN Sustainable Development Goal 3 (Good Health and Well-being).
 By identifying stress early through physiological signals, we enable preventive mental health care, reducing long-term risks such as anxiety disorders, cardiovascular issues, and burnout.
