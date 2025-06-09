@@ -1,85 +1,102 @@
-🎯 Detecting Stress for Healthier Lives:
-A Wearable-based AI Solution Supporting SDG 3
+AI for Sustainable Development: Stress Detection using Wearables
+🎯 Project Title
+"Detecting Stress for Healthier Lives: A Wearable-based AI Solution Supporting SDG 3"
+
 🧠 Objective
-This project applies machine learning to wearable biosensor data to detect stress levels, contributing to UN Sustainable Development Goal 3 (Good Health and Well-being).
-By identifying stress early through physiological signals, we enable preventive mental health care, reducing long-term risks such as anxiety disorders, cardiovascular issues, and burnout.
-________________________________________
+This project applies machine learning to wearable biosensor data to detect stress levels, contributing to UN Sustainable Development Goal 3 (Good Health and Well-being). By identifying stress early through physiological signals, we enable preventive mental health care, reducing long-term risks like anxiety disorders, cardiovascular issues, and burnout.
+
 💾 Dataset
 WESAD (Wearable Stress and Affect Detection)
-•	Source: University of Augsburg
-•	Participants: 15 individuals wearing Empatica E4 wristband and RespiBAN chest sensor
-•	Signals Collected:
-o	EDA (Electrodermal Activity)
-o	TEMP (Skin Temperature)
-o	ACC (Accelerometer – not used in this simplified model)
-•	Labels:
-o	0: Baseline (Relaxed)
-o	1: Stress
-o	2: Amusement
-For binary classification, we mapped labels as:
-•	1 → Stress
-•	0 → Not Stress (Baseline + Amusement)
-________________________________________
+
+Source: University of Augsburg
+
+Devices Used: Empatica E4 wristband and RespiBAN chest sensor
+
+Participants: 15
+
+Signals Collected:
+
+Electrodermal Activity (EDA)
+
+Skin Temperature
+
+Accelerometer
+
+Respiration, ECG, EMG
+
+Labels:
+
+0 = Baseline (relaxed)
+
+1 = Stress
+
+2 = Amusement
+
 🛠️ Tools & Libraries
-•	Python 3.10+
-•	Jupyter Notebook
-•	Libraries:
-o	pandas
-o	numpy
-o	scikit-learn
-o	matplotlib
-o	seaborn
-o	xgboost
-________________________________________
+
+Language: Python 3.10+
+
+IDE: Jupyter Notebook
+
+Libraries: pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn
+
 🔍 ML Approach
-✅ Supervised Learning – Binary Classification
-•	Features Used:
-o	Electrodermal Activity (EDA)
-o	Temperature (TEMP)
-•	Label Mapping:
-o	1 = Stress
-o	0 = Not Stress
-•	Primary Model Used:
-o	Random Forest Classifier
-•	Alternative Models Tested:
-o	✅ XGBoost
-o	✅ Support Vector Machine (SVM)
-o	✅ Neural Networks (MLPClassifier)
-________________________________________
+✅ Supervised Learning
+
+Problem Formulation: Binary classification
+
+Label 1 = Stress
+
+Label 0 = Not Stress (Baseline or Amusement)
+
+Model Used: Random Forest Classifier
+
+(Alternative models tested: XGBoost, SVM, Neural Networks)
+
 🧪 Workflow Summary
-1. Data Preprocessing:
-•	Cleaned and normalized EDA and TEMP sensor readings
-•	Dropped initial timestamp/noise rows
-•	Combined datasets with aligned length
-•	Applied KMeans clustering to simulate unsupervised labeling
-•	Remapped cluster output to stress and non-stress
-2. Model Training:
-•	Performed 80/20 train-test split
-•	Trained Random Forest Classifier
-3. Evaluation:
-•	Achieved 100% Accuracy
-•	Visualized results using:
-o	Confusion Matrix
-o	PCA projection
-o	EDA vs TEMP cluster scatter plot
-________________________________________
+
+Data Preprocessing:
+
+Loaded and normalized EDA and TEMP data
+
+Converted multi-class labels to binary (stress vs. not stress)
+
+Model Training:
+
+Used 80/20 train-test split
+
+Trained Random Forest model
+
+Evaluation:
+
+Confusion Matrix
+
+Classification Report
+
+Feature Importance Plot
+
 📈 Results
-•	Accuracy (Random Forest): 100.00%
-•	Alternative Models Tested:
-o	XGBoost
-o	Support Vector Machine (SVM)
-o	Neural Networks
-•	Key Features: EDA and Temperature
-•	Visuals:
-________________________________________
+
+Accuracy: ~99.9%
+
+Key Features: EDA and Skin Temperature were most predictive
+
+Visuals: Confusion Matrix, PCA plot, Feature Importance
+
 ⚖️ Ethical Considerations
-•	Bias Awareness: Model may behave differently across genders, ages, and health statuses
-•	Data Privacy: Dataset is anonymized; deployment must follow GDPR/HIPAA regulations
-•	Accessibility: This model should be used with affordable wearable sensors to reach underserved communities
-________________________________________
+
+❗ Bias: Model performance may vary across age, gender, or health conditions
+
+💬 Privacy: Dataset is anonymized. Future deployments must follow GDPR/HIPAA
+
+💡 Access: Solution should be paired with affordable wearables for inclusivity
+
 🚀 Impact
-This AI model enables real-time, non-invasive stress monitoring and can be deployed in:
-•	High-stress workplaces (e.g., nurses, pilots)
-•	Corporate wellness programs
-•	Personal mental health tracking
-•	Preventive interventions
+This AI model supports mental health monitoring in a non-invasive and real-time manner.
+Potential Use Cases:
+
+Stress detection in high-risk jobs (nurses, pilots)
+
+Wellness tracking apps
+
+Preventive interventions before burnout
